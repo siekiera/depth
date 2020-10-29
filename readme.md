@@ -1,5 +1,10 @@
 A tool which utilizes jdeps and git diff to find leaf usages of all modified Java files.
 
+Requirements:
+* Bash
+* Python >= 3.7
+* jdeps in path (should be part of JDK)
+
 Example usages:
 
 Find all leaf usages of all files modified between branch1 and branch2
@@ -26,3 +31,5 @@ Find all leaf usages of `pkg.SomeClass` using deps from a file
 ```
 ./depth.sh -c pkg.SomeClass -f tmp/deps.txt -r /path/to/git/repo
 ```
+
+The result is printed to stdout, so may be e.g. grepped or processed using other shell tools.
